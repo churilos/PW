@@ -53,7 +53,7 @@ i = 0
 for i in range(0,500):
   if i == 0 :
     if i%7==0 : print("{\n"+str(i), end="")
-  elif i%7==0 : print(",\t\t{}".format(i), end="")
+  elif i%7==0 : print(", {}".format(i), end="")
 else:
   print("\n}")
 i = -1
@@ -63,7 +63,7 @@ while i<500 :
     i=i+1
     continue
   elif i == 0 : print("{}".format(i), end="")
-  else : print(",\t\t{}".format(i), end="")
+  else : print(", {}".format(i), end="")
   i=i+1
 print("\n}\n")
 tmp=1
