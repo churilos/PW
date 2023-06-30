@@ -8,5 +8,5 @@ def index(request):
 def add(request):
   return render(request, 'personal_cabinet/add.html', {'var': 'It\'s a page of adding data.'})
 
-def add(request):
+def view(request):
   return render(request, 'personal_cabinet/view.html', {'var': 'It\'s a page of viewung data.'})
