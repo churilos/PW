@@ -35,3 +35,6 @@ class Circle(Geometric):
   def calculateArea(self):
     area = math.pi * pow(self.__radius, 2)
     print("Area of Circle with radius {}: {}\n".format(self.__radius, area))
+
+circle = Circle(3)
+circle.calculateArea()
