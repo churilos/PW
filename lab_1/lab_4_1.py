@@ -24,9 +24,9 @@ print("Owner: ", ticket1.owner)
 print("Owner(getattr): ", getattr(ticket1,"owner"))
 # проверка наличия атрибута
 print("hasattr: ", hasattr(ticket1,"owner")) 
-setattr(ticket1,"owner","Alexei Petrov") # установка
-значения атрибута
+setattr(ticket1,"owner","Alexei Petrov") # установка значения атрибута
 print("Owner(setattr): ", ticket1.owner)
-# delattr(ticket1,"owner") # удаление значения 
-атрибута
+# delattr(ticket1,"owner") # удаление значения атрибута
 # print("delattr: ", ticket1.owner)
+ del ticket1 # удаление объекта
+# print(ticket1)
