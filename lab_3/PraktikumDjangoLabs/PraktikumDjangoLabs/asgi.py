@@ -1,5 +1,5 @@
 """
-ASGI config for TestApp project.
+ASGI config for PraktikumDjangoLabs project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,7 +11,7 @@ import os
 from pyngrok import ngrok
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'TestApp.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'PraktikumDjangoLabs.settings')
 
 application = get_asgi_application()
 
