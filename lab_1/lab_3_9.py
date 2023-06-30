@@ -22,3 +22,4 @@ for s in "Strings can be easily written to file":
  if s == " ":
  file3.write("\n")
 print("File 3 was written successfully")
+file3.close()
