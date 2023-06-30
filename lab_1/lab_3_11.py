@@ -2,9 +2,11 @@ import heapq
 import os
 from collections import defaultdict
 
+
+
 def encodeHuffman(fileIn, fileOut):
     try:
-        with open(fileIn, 'r') as f:
+        with open(f'{os.getcwd()}/{fileIn}', 'r') as f:
             text = f.read()
         if not text:
             return False
@@ -23,7 +25,7 @@ def encodeHuffman(fileIn, fileOut):
             heapq.heappush(heap, [lo[0] + hi[0]] + lo[1:] + hi[1:])
         codes = dict(sorted(heapq.heappop(heap)[1:], key=lambda p: (len(p[-1]), p)))
         encoded_text = "".join([codes[ch] for ch in text])
-        with open(fileOut, 'w') as f:
+        with open(f'{os.getcwd()}/{fileOut}', 'w') as f:
             for ch in codes:
                 f.write(f"{ch} {codes[ch]}\n")
             f.write("\n" + encoded_text)
@@ -33,7 +35,7 @@ def encodeHuffman(fileIn, fileOut):
 
 def decodeHuffman(fileIn, fileOut):
     try:
-        with open(fileIn, 'r') as f:
+        with open(f'{os.getcwd()}/{fileIn}', 'r') as f:
             lines = f.readlines()
         if not lines:
             return False
@@ -51,7 +53,7 @@ def decodeHuffman(fileIn, fileOut):
             if code in codes:
                 decoded_text += codes[code]
                 code = ""
-        with open(fileOut, 'w') as f:
+        with open(f'{os.getcwd()}/{fileOut}', 'w') as f:
             f.write(decoded_text)
         return True
     except:
@@ -59,7 +61,7 @@ def decodeHuffman(fileIn, fileOut):
 
 def encodeLZ(fileIn, fileOut):
     try:
-        with open(fileIn, 'r') as f:
+        with open(f'{os.getcwd()}/{fileIn}', 'r') as f:
             text = f.read()
         if not text:
             return False
@@ -79,7 +81,7 @@ def encodeLZ(fileIn, fileOut):
             i += 1
         if s:
             encoded_text.append(dictionary[s])
-        with open(fileOut, 'wb') as f:
+        with open(f'{os.getcwd()}/{fileOut}', 'wb') as f:
             for code in encoded_text:
                 f.write(code.to_bytes(2, byteorder='big'))
         return True
@@ -88,7 +90,7 @@ def encodeLZ(fileIn, fileOut):
 
 def decodeLZ(fileIn, fileOut):
     try:
-        with open(fileIn, 'rb') as f:
+        with open(f'{os.getcwd()}/{fileIn}', 'rb') as f:
             encoded_text = []
             while (byte := f.read(2)):
                 encoded_text.append(int.from_bytes(byte, byteorder='big'))
@@ -108,7 +110,7 @@ def decodeLZ(fileIn, fileOut):
             decoded_text += entry
             dictionary[len(dictionary)] = s + entry[0]
             s = entry
-        with open(fileOut, 'w') as f:
+        with open(f'{os.getcwd()}/{fileOut}', 'w') as f:
             f.write(decoded_text)
         return True
     except:
@@ -119,7 +121,12 @@ textInFile = 'test_text.txt'
 textOutFile = 'encoded_text.txt'
 decodedTextOutFile = 'decoded_text.txt'
 
-with open(textInFile, 'w') as f:
+text = 'The best text ever'
+
+with open(f'{os.getcwd()}/{decodedTextOutFile}', 'w') as f:
+  f.write(text)
+
+with open(f'{os.getcwd()}/{textInFile}', 'w') as f:
     f.write('this is some test text')
 
 if encodeHuffman(textInFile, textOutFile):
@@ -132,7 +139,7 @@ if decodeHuffman(textOutFile, decodedTextOutFile):
 else:
     print('Huffman decoding failed')
 
-with open(decodedTextOutFile, 'r') as f:
+with open(f'{os.getcwd()}/{decodedTextOutFile}', 'r') as f:
     print(f.read())
 
 if encodeLZ(textInFile, textOutFile):
@@ -145,7 +152,7 @@ if decodeLZ(textOutFile, decodedTextOutFile):
 else:
     print('LZ decoding failed')
 
-with open(decodedTextOutFile, 'r') as f:
+with open(f'{os.getcwd()}/{decodedTextOutFile}', 'r') as f:
     print(f.read())
 
 # Подбор текстов для сравнения методов Хаффмана и Лемпеля-Зива.
@@ -166,7 +173,7 @@ print(f'Original size: {originalSize} bytes')
 print(f'Huffman size: {huffmanSize} bytes')
 print(f'LZ size: {lzSize} bytes')
 
-with open(textInFile, 'w') as f:
+with open(f'{os.getcwd()}/{textInFile}', 'w') as f:
     f.write(text2)
 
 encodeHuffman(textInFile, textOutFile)
