@@ -11,17 +11,15 @@ print("Get dict values d5.values(): ", d5.values()) #
 список значений
 print("\n")
 
-# Creating myInfo dictionary
 myInfo = {
-    'surname': 'YourSurname',
-    'name': 'YourName',
-    'middlename': 'YourMiddleName',
-    'day': 1,
-    'month': 1,
-    'year': 2000,
-    'university': 'YourUniversity'
+    'surname': 'Ivanov',
+    'name': 'Ivan',
+    'middlename': 'Ivanovich',
+    'day': 12,
+    'month': 2,
+    'year': 2003,
+    'university': 'NIU BelSU'
 }
 
-# Printing keys and values of myInfo dictionary
 print("Keys of myInfo dictionary: ", list(myInfo.keys()))
 print("Values of myInfo dictionary: ", list(myInfo.values()))
