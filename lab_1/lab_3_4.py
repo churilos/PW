@@ -15,3 +15,16 @@ print("Dict d2 by dict()= ", d2)
 print("Dict d3 by dict([])= ", d3)
 print("Dict d4 by fromkeys = ", d4)
 print("\n")
+
+startDict1 = {'ready': 3, 'set': 2, 'go': 1}
+print(startDict1)
+
+startDict2 = dict([('ready', 3), ('set', 2), ('go', 1)])
+print(startDict2)
+
+startDict3 = dict(ready=3, set=2, go=1)
+print(startDict3)
+
+value = input("Enter a value: ")
+dict1 = {'key1': value, 'key2': value}
+print(dict1)
