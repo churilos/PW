@@ -5,13 +5,11 @@ print("Dict d5 copying d2 = ", d5)
 print("Get dict value by key d5['bag']: ", d5["bag"])
 print("Get dict value by key d5.get('bag'): ", 
 d5.get('bag'))
-print("Get dict keys d5.keys(): ", d5.keys()) # 
-список ключей
-print("Get dict values d5.values(): ", d5.values()) # 
-список значений
+print("Get dict keys d5.keys(): ", d5.keys()) 
+print("Get dict values d5.values(): ", d5.values()) 
 print("\n")
 
-myInfo = {
+studentInfo = {
     'surname': 'Ivanov',
     'name': 'Ivan',
     'middlename': 'Ivanovich',
@@ -21,5 +19,5 @@ myInfo = {
     'university': 'NIU BelSU'
 }
 
-print("Keys of myInfo dictionary: ", list(myInfo.keys()))
-print("Values of myInfo dictionary: ", list(myInfo.values()))
+print("Keys of myInfo dictionary: ", list(studentInfo.keys()))
+print("Values of myInfo dictionary: ", list(studentInfo.values()))
