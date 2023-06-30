@@ -9,7 +9,7 @@ print("Get dict keys d5.keys(): ", d5.keys())
 print("Get dict values d5.values(): ", d5.values()) 
 print("\n")
 
-studentInfo = {
+myInfo = {
     'surname': 'Ivanov',
     'name': 'Ivan',
     'middlename': 'Ivanovich',
@@ -19,5 +19,5 @@ studentInfo = {
     'university': 'NIU BelSU'
 }
 
-print("Keys of myInfo dictionary: ", list(studentInfo.keys()))
-print("Values of myInfo dictionary: ", list(studentInfo.values()))
+print("Keys of myInfo dictionary: ", list(myInfo.keys()))
+print("Values of myInfo dictionary: ", list(myInfo.values()))
