@@ -46,3 +46,16 @@ class LZEncoder(Encoder):
 
     def getCompressionCoef(self):
         return self.compressionCoef
+
+string = "Python is a widely used high-level programming language for general-purpose programming, created by Guido van Rossum and first released in 1991."
+
+huffman_encoder = HuffmanEncoder()
+encoded_string = huffman_encoder.encode(string)
+decoded_string = huffman_encoder.decode(encoded_string)
+compression_coef = huffman_encoder.getCompressionCoef()
+
+lz_encoder = LZEncoder()
+encoded_string = lz_encoder.encode(string)
+decoded_string = lz_encoder.decode(encoded_string)
+compression_coef = lz_encoder.getCompressionCoef()
+
