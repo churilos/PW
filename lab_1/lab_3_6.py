@@ -23,3 +23,13 @@ f = returnFunc(d)
 print("f: ", f)
 f(2)
 print("\n")
+
+def returnMod():
+    def mod15(x):
+        result = x % 15
+        print(result)
+        return result
+    return mod15
+
+mod15 = returnMod()
+mod15(42)
