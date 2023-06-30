@@ -1,3 +1,12 @@
+d1 = {
+ "day": 18,
+ "month": 6,
+ "year": 1983
+}
+d2 = dict(bananas=3,apples=5,oranges=2,bag="basket")
+d3 = dict([("street","Kronverksky pr."), ("house", 
+49)])
+d4 = dict.fromkeys(["1","2"], 3)
 d5 = d2.copy() # создание копии словаря
 print("Dict d5 copying d2 = ", d5)
 40
