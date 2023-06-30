@@ -20,3 +20,13 @@ printArgs("Hello World!", 1, 3, 5)
 printArgsnKwargs("Earth", 7.125, radius=6371, pos=3)
 print("\n")
 
+def checkArgs(*args, **kwargs):
+    if len(args) <= 3 and len(kwargs) < 3:
+        print("Arguments:", args)
+        print("Keyword arguments:", kwargs)
+    else:
+        print("Warning: too many arguments passed to function")
+
+# Example usage
+checkArgs(1, 2, 3, a=1, b=2)
+checkArgs(1, 2, 3, 4, a=1, b=2)
