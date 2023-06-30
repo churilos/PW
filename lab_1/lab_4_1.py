@@ -28,5 +28,5 @@ setattr(ticket1,"owner","Alexei Petrov") # установка значения �
 print("Owner(setattr): ", ticket1.owner)
 # delattr(ticket1,"owner") # удаление значения атрибута
 # print("delattr: ", ticket1.owner)
- del ticket1 # удаление объекта
-# print(ticket1)
+del ticket1 # удаление объекта
+print(ticket1)
