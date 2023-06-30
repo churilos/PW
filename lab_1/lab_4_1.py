@@ -30,3 +30,10 @@ print("Owner(setattr): ", ticket1.owner)
 # print("delattr: ", ticket1.owner)
 del ticket1 # удаление объекта
 print(ticket1)
+
+
+current_time = time.localtime()
+formatted_time = time.strftime("%d %b %Y %H:%M:%S", current_time)
+print(formatted_time)
+time_string = "17.07.2017 10:53:00"
+time_object = time.strptime(time_string, "%d.%m.%Y %H:%M:%S")
